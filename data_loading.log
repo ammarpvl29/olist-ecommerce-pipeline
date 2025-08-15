@@ -1,0 +1,127 @@
+2025-08-10 00:34:31,299 - INFO - ✓ Connected to PostgreSQL
+2025-08-10 00:34:31,366 - ERROR - ✗ Error creating schemas: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-10 00:34:31,366 - ERROR - Cannot proceed without schemas
+2025-08-10 00:46:52,047 - INFO - ✓ Connected to PostgreSQL
+2025-08-10 00:46:52,101 - ERROR - ✗ Error creating schemas: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-10 00:46:52,103 - ERROR - Cannot proceed without schemas
+2025-08-10 00:50:25,068 - INFO - ✓ Connected to PostgreSQL
+2025-08-10 00:50:25,114 - ERROR - ✗ Error creating schemas: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-10 00:50:25,115 - ERROR - Cannot proceed without schemas
+2025-08-10 00:52:34,070 - ERROR - ✗ Failed to connect to database:
+2025-08-10 00:52:34,070 - ERROR -   With password: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-10 00:52:34,071 - ERROR -   Without password: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-10 00:52:34,072 - ERROR - Cannot proceed without database connection
+2025-08-10 00:52:58,308 - ERROR - ✗ Failed to connect to database:
+2025-08-10 00:52:58,308 - ERROR -   With password: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-10 00:52:58,309 - ERROR -   Without password: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no password supplied
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-10 00:52:58,309 - ERROR - Cannot proceed without database connection
+2025-08-10 00:53:43,322 - WARNING -   Connection attempt 1 failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password 
+2025-08-10 00:53:43,361 - WARNING -   Connection attempt 2 failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no p
+2025-08-10 00:53:43,500 - WARNING -   Connection attempt 3 failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no p
+2025-08-10 00:53:43,500 - ERROR - ✗ All connection attempts failed
+2025-08-10 00:53:43,500 - ERROR - Cannot proceed without database connection
+2025-08-10 00:54:24,156 - WARNING -   Connection attempt 1 failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password 
+2025-08-10 00:54:24,191 - WARNING -   Connection attempt 2 failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no p
+2025-08-10 00:54:24,226 - WARNING -   Connection attempt 3 failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no p
+2025-08-10 00:54:24,226 - ERROR - ✗ All connection attempts failed
+2025-08-10 00:54:24,227 - ERROR - Cannot proceed without database connection
+2025-08-10 00:56:20,389 - WARNING -   Connection attempt 1 failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password 
+2025-08-10 00:56:20,433 - WARNING -   Connection attempt 2 failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no p
+2025-08-10 00:56:20,467 - WARNING -   Connection attempt 3 failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no p
+2025-08-10 00:56:20,467 - ERROR - ✗ All connection attempts failed
+2025-08-10 00:56:20,467 - ERROR - Cannot proceed without database connection
+2025-08-14 21:16:36,388 - WARNING -   Connection attempt 1 failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password 
+2025-08-14 21:16:36,388 - ERROR - ✗ All connection attempts failed
+2025-08-14 21:16:36,388 - ERROR - Cannot proceed without database connection
+2025-08-14 21:20:30,968 - WARNING -   Connection attempt 1 failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password 
+2025-08-14 21:20:30,969 - ERROR - ✗ All connection attempts failed
+2025-08-14 21:20:30,969 - ERROR - Cannot proceed without database connection
+2025-08-14 21:21:15,629 - INFO - Attempting to connect to: postgresql://olist_user:***@127.0.0.1:5432/olist_analytics
+2025-08-14 21:21:15,721 - ERROR - ✗ Connection failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-14 21:21:15,721 - ERROR -   This is a password authentication error.
+2025-08-14 21:21:15,721 - ERROR -   Make sure the PostgreSQL user 'olist_user' exists with password 'olist_pass123'
+2025-08-14 21:21:15,721 - ERROR - Cannot proceed without database connection
+2025-08-14 21:22:26,923 - INFO - Attempting to connect to: postgresql://olist_user:***@127.0.0.1:5432/olist_analytics
+2025-08-14 21:22:27,187 - ERROR - ✗ Connection failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no password supplied
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-14 21:22:27,187 - ERROR - Cannot proceed without database connection
+2025-08-14 21:24:03,561 - INFO - Attempting to connect to: postgresql://olist_user:***@127.0.0.1:5432/olist_analytics
+2025-08-14 21:24:03,658 - ERROR - ✗ Connection failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-14 21:24:03,658 - ERROR -   This is a password authentication error.
+2025-08-14 21:24:03,658 - ERROR -   Make sure the PostgreSQL user 'olist_user' exists with password 'olist_pass123'
+2025-08-14 21:24:03,658 - ERROR - Cannot proceed without database connection
+2025-08-14 21:26:00,109 - INFO - Attempting to connect to: postgresql://olist_user:***@127.0.0.1:5432/olist_analytics
+2025-08-14 21:26:00,307 - ERROR - ✗ Connection failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-14 21:26:00,307 - ERROR -   This is a password authentication error.
+2025-08-14 21:26:00,308 - ERROR -   Make sure the PostgreSQL user 'olist_user' exists with password 'olist_pass123'
+2025-08-14 21:26:00,308 - ERROR - Cannot proceed without database connection
+2025-08-14 21:30:29,677 - INFO - Attempting to connect to: postgresql://olist_user:***@127.0.0.1:5432/olist_analytics
+2025-08-14 21:30:29,894 - ERROR - ✗ Connection failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-14 21:30:29,894 - ERROR -   This is a password authentication error.
+2025-08-14 21:30:29,894 - ERROR -   Make sure the PostgreSQL user 'olist_user' exists with password 'olist_pass123'
+2025-08-14 21:30:29,894 - ERROR - Cannot proceed without database connection
+2025-08-14 21:37:31,966 - INFO - Attempting to connect to: postgresql://olist_user:***@127.0.0.1:5432/olist_analytics
+2025-08-14 21:37:32,066 - ERROR - ✗ Connection failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-14 21:37:32,067 - ERROR -   This is a password authentication error.
+2025-08-14 21:37:32,067 - ERROR -   Make sure the PostgreSQL user 'olist_user' exists with password 'olist_pass123'
+2025-08-14 21:37:32,067 - ERROR - Cannot proceed without database connection
+2025-08-14 21:38:26,596 - INFO - Attempting to connect to: postgresql://olist_user:***@127.0.0.1:5432/olist_analytics
+2025-08-14 21:38:26,690 - ERROR - ✗ Connection failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-14 21:38:26,690 - ERROR -   This is a password authentication error.
+2025-08-14 21:38:26,690 - ERROR -   Make sure the PostgreSQL user 'olist_user' exists with password 'olist_pass123'
+2025-08-14 21:38:26,691 - ERROR - Cannot proceed without database connection
+2025-08-14 23:31:55,277 - INFO - Attempting to connect to: postgresql://olist_user:***@127.0.0.1:5432/olist_analytics
+2025-08-14 23:31:55,649 - ERROR - ✗ Connection failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-14 23:31:55,649 - ERROR -   This is a password authentication error.
+2025-08-14 23:31:55,649 - ERROR -   Make sure the PostgreSQL user 'olist_user' exists with password 'olist_pass123'
+2025-08-14 23:31:55,649 - ERROR - Cannot proceed without database connection
+2025-08-14 23:32:12,679 - INFO - Attempting to connect to: postgresql://olist_user:***@127.0.0.1:5432/olist_analytics
+2025-08-14 23:32:12,782 - ERROR - ✗ Connection failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-14 23:32:12,782 - ERROR -   This is a password authentication error.
+2025-08-14 23:32:12,782 - ERROR -   Make sure the PostgreSQL user 'olist_user' exists with password 'olist_pass123'
+2025-08-14 23:32:12,782 - ERROR - Cannot proceed without database connection
+2025-08-14 23:32:33,638 - INFO - Attempting to connect to: postgresql://olist_user:***@127.0.0.1:5432/olist_analytics
+2025-08-14 23:32:33,739 - ERROR - ✗ Connection failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-14 23:32:33,739 - ERROR -   This is a password authentication error.
+2025-08-14 23:32:33,739 - ERROR -   Make sure the PostgreSQL user 'olist_user' exists with password 'olist_pass123'
+2025-08-14 23:32:33,739 - ERROR - Cannot proceed without database connection
+2025-08-14 23:32:46,773 - INFO - Attempting to connect to: postgresql://olist_user:***@127.0.0.1:5432/olist_analytics
+2025-08-14 23:32:46,871 - ERROR - ✗ Connection failed: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "olist_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-14 23:32:46,871 - ERROR -   This is a password authentication error.
+2025-08-14 23:32:46,871 - ERROR -   Make sure the PostgreSQL user 'olist_user' exists with password 'olist_pass123'
+2025-08-14 23:32:46,871 - ERROR - Cannot proceed without database connection

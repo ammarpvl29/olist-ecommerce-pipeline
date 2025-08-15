@@ -1,0 +1,59 @@
+{
+  "files": [
+    {
+      "file": "data/raw/olist_customers_dataset.csv",
+      "table": "olist_customers_dataset",
+      "format": "csv",
+      "header": true
+    },
+    {
+      "file": "data/raw/olist_geolocation_dataset.csv",
+      "table": "olist_geolocation_dataset",
+      "format": "csv",
+      "header": true
+    },
+    {
+      "file": "data/raw/olist_order_items_dataset.csv",
+      "table": "olist_order_items_dataset",
+      "format": "csv",
+      "header": true
+    },
+    {
+      "file": "data/raw/olist_order_payments_dataset.csv",
+      "table": "olist_order_payments_dataset",
+      "format": "csv",
+      "header": true
+    },
+    {
+      "file": "data/raw/olist_order_reviews_dataset.csv",
+      "table": "olist_order_reviews_dataset",
+      "format": "csv",
+      "header": true
+    },
+    {
+      "file": "data/raw/olist_orders_dataset.csv",
+      "table": "olist_orders_dataset",
+      "format": "csv",
+      "header": true
+    },
+    {
+      "file": "data/raw/olist_products_dataset.csv",
+      "table": "olist_products_dataset",
+      "format": "csv",
+      "header": true
+    },
+    {
+      "file": "data/raw/olist_sellers_dataset.csv",
+      "table": "olist_sellers_dataset",
+      "format": "csv",
+      "header": true
+    },
+    {
+      "file": "data/raw/product_category_name_translation.csv",
+      "table": "product_category_name_translation",
+      "format": "csv",
+      "header": true
+    }
+  ],
+  "target_schema": "raw_data"
+}

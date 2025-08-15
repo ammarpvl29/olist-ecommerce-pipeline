@@ -1,0 +1,25 @@
+olist_analytics:
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5433
+      user: olist_user
+      password: olist_pass123
+      dbname: olist_analytics
+      schema: dbt_dev
+      threads: 4
+      keepalives_idle: 0
+    
+    prod:
+      type: postgres
+      host: localhost
+      port: 5433
+      user: olist_user
+      password: olist_pass123
+      dbname: olist_analytics
+      schema: analytics
+      threads: 4
+      keepalives_idle: 0
+
+  target: dev

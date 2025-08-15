@@ -1,0 +1,145 @@
+2025-08-14 23:36:54,885 - INFO - Attempting to connect to: postgresql://olist_user:***@127.0.0.1:5433/olist_analytics
+2025-08-14 23:36:55,020 - INFO - ✓ Connected as user: olist_user, database: olist_analytics
+2025-08-14 23:36:55,041 - INFO - ✓ Schemas created/verified
+2025-08-14 23:36:55,042 - INFO - 
+============================================================
+2025-08-14 23:36:55,042 - INFO - 📊 Loading olist_customers_dataset.csv
+2025-08-14 23:36:55,043 - INFO - ============================================================
+2025-08-14 23:36:55,243 - INFO -   Rows: 99,441
+2025-08-14 23:36:55,243 - INFO -   Columns: customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+2025-08-14 23:37:06,708 - INFO -   ✓ Loaded 99,441 rows to raw_data.customers
+2025-08-14 23:37:06,710 - INFO - 
+============================================================
+2025-08-14 23:37:06,710 - INFO - 📊 Loading olist_geolocation_dataset.csv
+2025-08-14 23:37:06,711 - INFO - ============================================================
+2025-08-14 23:37:07,613 - INFO -   Rows: 1,000,163
+2025-08-14 23:37:07,613 - INFO -   Columns: geolocation_zip_code_prefix, geolocation_lat, geolocation_lng, geolocation_city, geolocation_state
+2025-08-14 23:39:06,815 - INFO -   ✓ Loaded 1,000,163 rows to raw_data.geolocation
+2025-08-14 23:39:06,817 - INFO - 
+============================================================
+2025-08-14 23:39:06,818 - INFO - 📊 Loading olist_orders_dataset.csv
+2025-08-14 23:39:06,818 - INFO - ============================================================
+2025-08-14 23:39:07,611 - INFO -   Rows: 99,441
+2025-08-14 23:39:07,627 - INFO -   Columns: order_id, customer_id, order_status, order_purchase_timestamp, order_approved_at... (8 total)
+2025-08-14 23:39:07,676 - INFO -   Null values found:
+2025-08-14 23:39:07,682 - INFO -     - order_approved_at: 160 (0.2%)
+2025-08-14 23:39:07,682 - INFO -     - order_delivered_carrier_date: 1,783 (1.8%)
+2025-08-14 23:39:07,683 - INFO -     - order_delivered_customer_date: 2,965 (3.0%)
+2025-08-14 23:39:26,502 - INFO -   ✓ Loaded 99,441 rows to raw_data.orders
+2025-08-14 23:39:26,504 - INFO - 
+============================================================
+2025-08-14 23:39:26,504 - INFO - 📊 Loading olist_order_items_dataset.csv
+2025-08-14 23:39:26,504 - INFO - ============================================================
+2025-08-14 23:39:26,834 - INFO -   Rows: 112,650
+2025-08-14 23:39:26,834 - INFO -   Columns: order_id, order_item_id, product_id, seller_id, shipping_limit_date... (7 total)
+2025-08-14 23:39:44,248 - INFO -   ✓ Loaded 112,650 rows to raw_data.order_items
+2025-08-14 23:39:44,251 - INFO - 
+============================================================
+2025-08-14 23:39:44,251 - INFO - 📊 Loading olist_order_payments_dataset.csv
+2025-08-14 23:39:44,251 - INFO - ============================================================
+2025-08-14 23:39:44,355 - INFO -   Rows: 103,886
+2025-08-14 23:39:44,355 - INFO -   Columns: order_id, payment_sequential, payment_type, payment_installments, payment_value
+2025-08-14 23:39:55,536 - INFO -   ✓ Loaded 103,886 rows to raw_data.order_payments
+2025-08-14 23:39:55,538 - INFO - 
+============================================================
+2025-08-14 23:39:55,539 - INFO - 📊 Loading olist_order_reviews_dataset.csv
+2025-08-14 23:39:55,539 - INFO - ============================================================
+2025-08-14 23:39:55,987 - INFO -   Rows: 99,224
+2025-08-14 23:39:55,988 - INFO -   Columns: review_id, order_id, review_score, review_comment_title, review_comment_message... (7 total)
+2025-08-14 23:39:56,098 - INFO -   Null values found:
+2025-08-14 23:39:56,099 - INFO -     - review_comment_title: 87,656 (88.3%)
+2025-08-14 23:39:56,099 - INFO -     - review_comment_message: 58,247 (58.7%)
+2025-08-14 23:40:11,488 - INFO -   ✓ Loaded 99,224 rows to raw_data.order_reviews
+2025-08-14 23:40:11,491 - INFO - 
+============================================================
+2025-08-14 23:40:11,491 - INFO - 📊 Loading olist_products_dataset.csv
+2025-08-14 23:40:11,492 - INFO - ============================================================
+2025-08-14 23:40:11,577 - INFO -   Rows: 32,951
+2025-08-14 23:40:11,578 - INFO -   Columns: product_id, product_category_name, product_name_lenght, product_description_lenght, product_photos_qty... (9 total)
+2025-08-14 23:40:11,595 - INFO -   Null values found:
+2025-08-14 23:40:11,596 - INFO -     - product_category_name: 610 (1.9%)
+2025-08-14 23:40:11,596 - INFO -     - product_name_lenght: 610 (1.9%)
+2025-08-14 23:40:11,597 - INFO -     - product_description_lenght: 610 (1.9%)
+2025-08-14 23:40:11,597 - INFO -     - product_photos_qty: 610 (1.9%)
+2025-08-14 23:40:11,598 - INFO -     - product_weight_g: 2 (0.0%)
+2025-08-14 23:40:11,598 - INFO -     - product_length_cm: 2 (0.0%)
+2025-08-14 23:40:11,599 - INFO -     - product_height_cm: 2 (0.0%)
+2025-08-14 23:40:11,599 - INFO -     - product_width_cm: 2 (0.0%)
+2025-08-14 23:40:18,335 - INFO -   ✓ Loaded 32,951 rows to raw_data.products
+2025-08-14 23:40:18,337 - INFO - 
+============================================================
+2025-08-14 23:40:18,337 - INFO - 📊 Loading olist_sellers_dataset.csv
+2025-08-14 23:40:18,337 - INFO - ============================================================
+2025-08-14 23:40:18,361 - INFO -   Rows: 3,095
+2025-08-14 23:40:18,362 - INFO -   Columns: seller_id, seller_zip_code_prefix, seller_city, seller_state
+2025-08-14 23:40:18,709 - INFO -   ✓ Loaded 3,095 rows to raw_data.sellers
+2025-08-14 23:40:18,711 - INFO - 
+============================================================
+2025-08-14 23:40:18,712 - INFO - 📊 Loading product_category_name_translation.csv
+2025-08-14 23:40:18,713 - INFO - ============================================================
+2025-08-14 23:40:18,754 - INFO -   Rows: 71
+2025-08-14 23:40:18,756 - INFO -   Columns: product_category_name, product_category_name_english
+2025-08-14 23:40:18,834 - INFO -   ✓ Loaded 71 rows to raw_data.product_category_translation
+2025-08-14 23:40:18,838 - INFO - 
+============================================================
+2025-08-14 23:40:18,839 - INFO - 📋 LOADING SUMMARY
+2025-08-14 23:40:18,840 - INFO - ============================================================
+2025-08-14 23:40:18,840 - INFO - ✓ Successfully loaded: 9 tables
+2025-08-14 23:40:18,841 - INFO -    - customers
+2025-08-14 23:40:18,841 - INFO -    - geolocation
+2025-08-14 23:40:18,843 - INFO -    - orders
+2025-08-14 23:40:18,843 - INFO -    - order_items
+2025-08-14 23:40:18,844 - INFO -    - order_payments
+2025-08-14 23:40:18,845 - INFO -    - order_reviews
+2025-08-14 23:40:18,846 - INFO -    - products
+2025-08-14 23:40:18,847 - INFO -    - sellers
+2025-08-14 23:40:18,848 - INFO -    - product_category_translation
+2025-08-14 23:40:18,917 - INFO - ✓ Documentation added to tables
+2025-08-14 23:40:18,988 - INFO - 
+✓ Created summary views for analysis
+2025-08-14 23:40:18,989 - INFO -   - v_order_summary
+2025-08-14 23:40:18,989 - INFO -   - v_product_performance
+2025-08-14 23:40:18,990 - INFO -   - v_seller_performance
+2025-08-14 23:40:18,990 - INFO - 
+============================================================
+2025-08-14 23:40:18,991 - INFO - 🔍 DATA QUALITY ANALYSIS
+2025-08-14 23:40:18,991 - INFO - ============================================================
+2025-08-14 23:40:18,992 - INFO - 
+📊 Key Metrics
+2025-08-14 23:40:18,992 - INFO - ----------------------------------------
+2025-08-14 23:40:19,015 - INFO -   Total Orders: 99,441
+2025-08-14 23:40:19,417 - INFO -   Orders with Reviews: 98,673
+2025-08-14 23:40:19,678 - INFO -   Unique Customers: 96,096
+2025-08-14 23:40:19,727 - INFO -   Repeat Customers: 2,997
+2025-08-14 23:40:19,784 - INFO -   Active Sellers: 3,095
+2025-08-14 23:40:19,807 - INFO -   Product Categories: 73
+2025-08-14 23:40:19,809 - INFO - 
+📅 Time Range
+2025-08-14 23:40:19,810 - INFO - ----------------------------------------
+2025-08-14 23:40:19,816 - INFO -   First Order Date: 2016-09-04
+2025-08-14 23:40:19,823 - INFO -   Last Order Date: 2018-10-17
+2025-08-14 23:40:19,832 - INFO -   Data Coverage (months): 25
+2025-08-14 23:40:19,835 - INFO - 
+💰 Financial Metrics
+2025-08-14 23:40:19,835 - INFO - ----------------------------------------
+2025-08-14 23:40:19,853 - INFO -   Total Revenue (BRL): 16008872.12
+2025-08-14 23:40:19,946 - INFO -   Average Order Value (BRL): 160.99
+2025-08-14 23:40:19,971 - INFO -   Average Product Price (BRL): 120.65
+2025-08-14 23:40:19,994 - INFO -   Average Freight Cost (BRL): 19.99
+2025-08-14 23:40:19,996 - INFO - 
+⭐ Customer Satisfaction
+2025-08-14 23:40:19,997 - INFO - ----------------------------------------
+2025-08-14 23:40:20,015 - INFO -   Average Review Score: 4.09
+2025-08-14 23:40:20,042 - INFO -   5-Star Reviews: 57328 (57.8%)
+2025-08-14 23:40:20,060 - INFO -   1-Star Reviews: 11424 (11.5%)
+2025-08-14 23:40:20,062 - INFO - 
+📍 Geographic Distribution
+2025-08-14 23:40:20,062 - INFO - ----------------------------------------
+2025-08-14 23:40:20,096 - INFO -   States with Orders: 27
+2025-08-14 23:40:20,185 - INFO -   Cities with Orders: 4,119
+2025-08-14 23:40:20,277 - INFO -   Top State by Orders: SP (41746 orders)
+2025-08-14 23:40:20,278 - INFO - 
+📦 Order Status
+2025-08-14 23:40:20,279 - INFO - ----------------------------------------
+2025-08-14 23:40:20,299 - INFO -   Delivered Orders: 96478 (97.0%)
+2025-08-14 23:40:20,313 - INFO -   Cancelled Orders: 625 (0.6%)

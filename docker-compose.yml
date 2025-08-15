@@ -1,0 +1,54 @@
+services:
+  # PostgreSQL Database for Analytics
+  postgres:
+    image: postgres:15
+    container_name: olist_postgres
+    environment:
+      POSTGRES_DB: olist_analytics
+      POSTGRES_USER: olist_user
+      POSTGRES_PASSWORD: olist_pass123
+      PGUSER: olist_user
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - olist_network
+
+  # Apache Superset
+  superset:
+    image: apache/superset:3.0.0
+    container_name: olist_superset
+    environment:
+      - SUPERSET_SECRET_KEY=your_secret_key_here_change_this_123456789
+      - SQLALCHEMY_DATABASE_URI=postgresql://superset:superset123@postgres_superset:5432/superset
+    ports:
+      - "8088:8088"
+    volumes:
+      - superset_home:/app/superset_home
+    networks:
+      - olist_network
+    depends_on:
+      - postgres_superset
+
+  postgres_superset:
+    image: postgres:15
+    container_name: postgres_superset
+    environment:
+      POSTGRES_DB: superset
+      POSTGRES_USER: superset
+      POSTGRES_PASSWORD: superset123
+    volumes:
+      - postgres_superset_data:/var/lib/postgresql/data
+    networks:
+      - olist_network
+
+networks:
+  olist_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  postgres_superset_data:
+  superset_home:
