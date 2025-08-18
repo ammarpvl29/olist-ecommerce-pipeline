@@ -20,7 +20,7 @@ logging.basicConfig(
 class OlistDataLoader:
     def __init__(self):
         self.engine = None
-        self.data_path = Path(__file__).parent.parent / "data" / "raw"
+        self.data_path = Path("F:/olist-ecommerce-pipeline/data/raw")
         self.metadata = MetaData()
         
         # Define table configurations with proper data types
@@ -176,47 +176,34 @@ class OlistDataLoader:
     
     def connect_database(self):
         """Establish database connection"""
-        import os
-        
         try:
-            # Database connection parameters - Updated to use port 5433
-            db_host = os.getenv('DB_HOST', '127.0.0.1')
-            db_port = os.getenv('DB_PORT', '5433')  # Changed from 5432 to 5433
-            db_name = os.getenv('DB_NAME', 'olist_analytics')
-            db_user = os.getenv('DB_USER', 'olist_user')
-            db_password = os.getenv('DB_PASSWORD', 'olist_pass123')
+            # Try different connection approaches
+            connection_attempts = [
+                'postgresql://olist_user:olist_pass123@127.0.0.1:5432/olist_analytics',
+                'postgresql://olist_user:@127.0.0.1:5432/olist_analytics',
+                'postgresql://olist_user@127.0.0.1:5432/olist_analytics'
+            ]
             
-            connection_string = f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
+            for i, conn_string in enumerate(connection_attempts):
+                try:
+                    self.engine = create_engine(
+                        conn_string,
+                        echo=False,
+                        pool_pre_ping=True
+                    )
+                    # Test the connection
+                    with self.engine.connect() as conn:
+                        conn.execute(text("SELECT 1"))
+                    logging.info(f"✓ Connected to PostgreSQL (attempt {i+1})")
+                    return True
+                except Exception as e:
+                    logging.warning(f"  Connection attempt {i+1} failed: {str(e)[:100]}")
+                    continue
             
-            logging.info(f"Attempting to connect to: postgresql://{db_user}:***@{db_host}:{db_port}/{db_name}")
-            
-            self.engine = create_engine(
-                connection_string,
-                echo=False,
-                pool_pre_ping=True,
-                connect_args={
-                    "connect_timeout": 10
-                }
-            )
-            
-            # Test the connection
-            with self.engine.connect() as conn:
-                result = conn.execute(text("SELECT current_user, current_database()"))
-                user_db = result.fetchone()
-                logging.info(f"✓ Connected as user: {user_db[0]}, database: {user_db[1]}")
-                return True
-                
+            logging.error("✗ All connection attempts failed")
+            return False
         except Exception as e:
-            logging.error(f"✗ Connection failed: {e}")
-            
-            # Try to give more specific error information
-            if "password authentication failed" in str(e):
-                logging.error("  This is a password authentication error.")
-                logging.error(f"  Make sure the PostgreSQL user '{db_user}' exists with password '{db_password}'")
-            elif "Connection refused" in str(e):
-                logging.error("  PostgreSQL server is not accepting connections.")
-                logging.error("  Make sure Docker container is running on port 5433: docker-compose up -d")
-            
+            logging.error(f"✗ Unexpected error connecting to database: {e}")
             return False
     
     def create_schemas(self):
